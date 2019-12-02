@@ -1,7 +1,7 @@
 # vim: set ts=4 sw=4 sts=0 sta et :
 FROM ubuntu:18.04
 EXPOSE 8000:8000
-ENV VERSION 3.7.2
+ENV VERSION 3.7.14
 
 # Executing group, with fixed group id
 ENV EXECUTING_GROUP fiduswriter
@@ -53,7 +53,7 @@ RUN apt-get update \
 # Run the unzipping, moving and removal of zip file in the same layer.
 RUN wget \
     --output-document=fiduswriter.zip \
-    https://github.com/fiduswriter/fiduswriter/archive/${VERSION}.zip \
+    https://github.com/StarKnowData/fiduswriter/archive/${VERSION}.zip \
     && unzip fiduswriter.zip \
     && mv fiduswriter-${VERSION} /fiduswriter \
     && rm fiduswriter.zip
