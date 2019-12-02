@@ -60,7 +60,7 @@ RUN wget \
 
 # Working directories should be absolute.
 # https://docs.docker.com/engine/userguide/eng-image/dockerfile_best-practices/#workdir
-WORKDIR /fiduswriter
+WORKDIR /fiduswriter/fiduswriter
 
 RUN pwd
 
