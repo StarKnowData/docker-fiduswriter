@@ -62,6 +62,10 @@ RUN wget \
 # https://docs.docker.com/engine/userguide/eng-image/dockerfile_best-practices/#workdir
 WORKDIR /fiduswriter
 
+RUN pwd
+
+RUN ls -la
+
 RUN mkdir static-libs && \
     cp configuration.py-default configuration.py
 
